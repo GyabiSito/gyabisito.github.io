@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/fotos.css">
+    <link rel="stylesheet" href="../estilos/responsive/fotosresponsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+    <meta name="author" content="José Gabriel Hernández">
+    <meta name="copyright" content="Propietario del copyright">
+    <link rel="icon" type="image" href="imagenes/logos/Logo.jpg">
+    <title>Fotos</title>
+</head>
+<body>
+    <nav id="nav" class="main-nav" >
+      <div class="nav-links" >
+        <a class="link-item" href="../index.html" >Inicio</a>
+        <a class="link-item" href="info.html" >Informacion</a>
+        <a class="link-item" href="../paginas/fotos.html" >Fotos</a>
+        <a class="link-item" href="../paginas/contactanos.html" >Contactanos</a>
+      </div>
+    </nav>
+    <button id="button-menu" class="button-menu" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <main>
+        <div id="mainImg" data-aos="zoom-in-up"></div>
+        <h1 data-aos="zoom-out">Fotos</h1>
+        <div id="instafeed-container" data-aos="zoom-in"></div>
+  
+  
+
+    </main>
+
+
+</body>
+</html>
+
+<script>
+    const toggleButton = document.getElementById('button-menu')
+  const navWrapper = document.getElementById('nav')
+  
+  toggleButton.addEventListener('click',() => {
+    toggleButton.classList.toggle('close')
+    navWrapper.classList.toggle('show')
+  })
+  
+  navWrapper.addEventListener('click',e => {
+    if(e.target.id === 'nav'){
+      navWrapper.classList.remove('show')
+      toggleButton.classList.remove('close')
+    }
+  })
+  
+  </script>
+
+
+
+<script type="text/javascript">
+var userFeed = new Instafeed({
+  get: 'user',
+  target: "instafeed-container",
+    resolution: 'low_resolution',
+  accessToken: 'IGQWRPYWxDNnN2d0V1aVRqN3gwU3hTbE9Pc0hfTFpJc0FsOGlrMXBjZAlRwOTR1bmdkTGV6dlh0WHBja3EwdlJiNnZAEX0ZAIWTBMeUhiT2FNSExqYWl5dVdxUFR1ckV1N3hiTkpJTXE0YjlCUnBYZAS1WZA19fc215a0UZD'
+});
+userFeed.run();
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
