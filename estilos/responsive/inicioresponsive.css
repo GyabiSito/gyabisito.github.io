@@ -1,0 +1,173 @@
+
+@media screen and (min-width:768px) {
+    .button-menu{
+      display: none;
+    }
+  
+    .main-logo{
+      flex-basis: 30%;
+    }
+  
+    .main-nav{
+      position: static;
+      margin-left: 0;
+      flex-basis: 70%;
+      height: 100%;
+    }
+  
+    .nav-links{
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      background: white;
+    }
+  
+    .link-item{
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .countdown {
+      flex-direction: column;
+      align-items: center;
+    }
+    .countdown-item span {
+        font-size: calc(1vw + 1vh);
+        color: rgb(36, 18, 18); 
+        font-size: 40px;
+        font-family: 'Karla', sans-serif;
+    }
+    .countdown div {
+
+      margin: 5px;
+    }
+    .slider{
+        width: 100vw;
+        position: absolute;
+    }
+    
+    .countdown p{
+      width: 60vw;
+      left: 60vw;
+      width: 30vw;
+      font-size: 20px;
+      background: rgba(105, 105, 105, 0.37);
+      box-shadow: 0 8px 32px 0 rgba(8, 9, 22, 0.37);
+      backdrop-filter: blur(4px);
+      color:#3b040f;
+
+    }
+    #somos p{
+      font-size: 20px;
+    }
+    #sede p{
+      font-size: 20px;
+    }
+    #maph2{
+      font-size: 10vw;
+    }
+    #evento{
+      font-size: 10vw;
+    }
+    #bienvenidoh1{
+      font-size: 6vw;
+
+    }
+    #sedeh2{
+      font-size: 10vw;
+    }
+    .mision{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+    .mbox{
+      width: 100vw;
+      height: 350px;
+      margin-top: 10vw;
+      overflow-y: auto;
+      overscroll-behavior-y: auto;
+    }
+    .mbox div{
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;
+    }
+
+    .mbox p{
+      font-size: 20px;
+      margin-left:0;
+    }
+    .founders{
+      margin-left: 0;
+    }
+    .fundadoresclase{
+      width: 100vw;
+    }
+    #fundadoresh2{
+      font-size: 10vw;
+    }
+    #miembrosh2{
+      font-size: 10vw;
+    }
+
+    .fundadoresclase p{
+      display: none;
+    }
+    .fundadoresclase:hover p{
+      display:block;
+      margin-left: 0;
+      width: 100%;
+      background-color:transparent;
+      filter: blur(0);
+      box-shadow: 0;
+    }
+    .fundadoresclase:hover .f1img{
+      visibility: visible;
+    }
+    .fundadoresclase:hover div{
+      visibility: visible;
+    }
+    .carouseldep p.active {
+      margin-top: 450px;
+      opacity: 1;
+      width: 100vw;
+      transition: 1s;
+      left:0;
+      font-size: 20px;
+
+    }
+    .carouseldep p{
+      margin-top: 400px;
+    }
+    .carouseldep{
+      background: url(../../imagenes/JawZr_ZtV_720x0__1.jpg);
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;
+    }
+    #carouseldepimg{
+      display:none;
+    }
+    #saymiembrosh2{
+      font-size: 8vw;
+    }
+    #h2mision{
+      font-size: 8vw;
+      height: 10vw;
+    }
+    #imgtruenos{
+      width: 100vw;
+      height: 300px;
+    }
+    .imagencarrusel{
+      height: 80vw;
+    }
+  
+    
+}

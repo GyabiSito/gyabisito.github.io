@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/info.css">
+    <link rel="stylesheet" href="../estilos/responsive/inforesponsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="José Gabriel Hernández">
+    <meta name="copyright" content="Propietario del copyright">
+    <link rel="icon" type="image" href="../imagenes/logos/logo.jpg">
+    <title>Los Truenos - Información</title>
+</head>
+<body>
+    <nav id="nav" class="main-nav" >
+      <div class="nav-links" >
+        <a class="link-item" href="../index.html" >Inicio</a>
+        <a class="link-item" href="info.html" >Informacion</a>
+        <a class="link-item" href="../paginas/fotos.html" >Fotos</a>
+        <a class="link-item" href="../paginas/contactanos.html" >Contactanos</a>
+      </div>
+    </nav>
+    <button id="button-menu" class="button-menu" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <main>
+      <div class="imagencarrusel">
+        <img class="activomainimg" src="../imagenes/main1.jpg" alt="Image 1">
+        <img class="fade-out" src="../imagenes/main2.jpg" alt="Image 2">
+        <img class="fade-out" src="../imagenes/main3.jpg" alt="Image 3">
+      </div>
+      
+      <h1 data-aos="fade-down">Información</h1>
+        <div id="info1" class="informacion"  data-aos="fade-right">
+            <div id="imginfo1" class="imginformacion" data-aos="zoom-in"></div>
+            <article>
+              <h2>Sobre Nosotros</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem asperiores enim nemo placeat laborum ratione, perspiciatis quam repellat magni quod, earum maiores est nobis. Culpa sapiente maxime fugiat reiciendis animi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nobis vero dolores perferendis consequuntur vitae consequatur eum obcaecati est, vel voluptatum optio delectus aliquid quisquam architecto corporis accusantium pariatur veritatis!</p>
+            </article>
+        </div>
+        <div id="info2" class="informacion" data-aos="fade-right">
+            <div id="imginfo2" class="imginformacion" data-aos="zoom-in" ></div>
+            <article>
+              <h2>Sobre Nosotros</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem asperiores enim nemo placeat laborum ratione, perspiciatis quam repellat magni quod, earum maiores est nobis. Culpa sapiente maxime fugiat reiciendis animi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nobis vero dolores perferendis consequuntur vitae consequatur eum obcaecati est, vel voluptatum optio delectus aliquid quisquam architecto corporis accusantium pariatur veritatis!</p>
+            </article>
+        </div>
+        <div id="info3" class="informacion" data-aos="fade-right">
+            <div id="imginfo3" class="imginformacion" data-aos="zoom-in"></div>
+            <article>
+              <h2>Sobre Nosotros</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem asperiores enim nemo placeat laborum ratione, perspiciatis quam repellat magni quod, earum maiores est nobis. Culpa sapiente maxime fugiat reiciendis animi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nobis vero dolores perferendis consequuntur vitae consequatur eum obcaecati est, vel voluptatum optio delectus aliquid quisquam architecto corporis accusantium pariatur veritatis!</p>
+            </article>
+        </div>
+</main>
+</body>
+</html>
+
+<script>
+    const toggleButton = document.getElementById('button-menu')
+  const navWrapper = document.getElementById('nav')
+  
+  toggleButton.addEventListener('click',() => {
+    toggleButton.classList.toggle('close')
+    navWrapper.classList.toggle('show')
+  })
+  
+  navWrapper.addEventListener('click',e => {
+    if(e.target.id === 'nav'){
+      navWrapper.classList.remove('show')
+      toggleButton.classList.remove('close')
+    }
+  })
+  
+  </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+  const images = document.querySelectorAll('.imagencarrusel img');
+  let currentIndex2 = 0;
+
+  function nextImage() {
+    images[currentIndex2].classList.remove('activomainimg');
+    images[currentIndex2].classList.add('fade-out');
+
+    currentIndex2 = (currentIndex2 + 1) % images.length;
+
+    images[currentIndex2].classList.add('activomainimg');
+    images[currentIndex2].classList.remove('fade-out');
+  }
+
+  setInterval(nextImage, 5000); // Cambiar la imagen cada 5 segundos
+</script>

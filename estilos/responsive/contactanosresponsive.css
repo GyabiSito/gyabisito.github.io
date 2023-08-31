@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Lugrasimo&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+@media screen and (min-width:768px) {
+    .button-menu{
+      display: none;
+    }
+  
+    .main-logo{
+      flex-basis: 30%;
+    }
+  
+    .main-nav{
+      position: static;
+      margin-left: 0;
+      flex-basis: 70%;
+      height: 100%;
+    }
+  
+    .nav-links{
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      background: white;
+    }
+  
+    .link-item{
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+  }
+
+
+  @media screen and (max-width:768px) {
+    .informacion{
+        width: 100vw;
+        margin-top: 30vh;
+        margin-left:0;
+    }
+    .imginformacion{
+        margin-left: 27.5vw;
+        width: 50vw;
+    }
+    .imagencarrusel{
+      height: 80vw;
+    }
+    .contacto{
+      justify-content: center;
+      align-items: center;
+      display: grid;
+      display: flex;
+    }
+    .contacto img{
+      margin-left:20px;
+    }
+  }

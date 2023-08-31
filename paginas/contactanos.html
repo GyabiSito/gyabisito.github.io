@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/contactanos.css">
+    <link rel="stylesheet" href="../estilos/responsive/contactanosresponsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="José Gabriel Hernández">
+    <meta name="copyright" content="Propietario del copyright">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="icon" type="image" href="../imagenes/logos/logo.jpg">
+    <!--<script src="../js/contacto.js" content="Contacto"></script>-->
+    <title>Los Truenos - Contáctanos</title>
+</head>
+<body>
+    <nav id="nav" class="main-nav" >
+      <div class="nav-links" >
+        <a class="link-item" href="../index.html" >Inicio</a>
+        <a class="link-item" href="info.html" >Informacion</a>
+        <a class="link-item" href="../paginas/fotos.html" >Fotos</a>
+        <a class="link-item" href="../paginas/contactanos.html" >Contactanos</a>
+      </div>
+    </nav>
+    <button id="button-menu" class="button-menu" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <main>
+      <div class="imagencarrusel">
+        <img class="activomainimg" src="../imagenes/main1.jpg" alt="Image 1">
+        <img class="fade-out" src="../imagenes/main2.jpg" alt="Image 2">
+        <img class="fade-out" src="../imagenes/main3.jpg" alt="Image 3">
+      </div>
+        <h1 data-aos="fade-up">Contáctanos</h1>
+        <div class="content">
+  
+          <div class="contact-wrapper animated bounceInUp">
+              <div class="contact-form">
+                  <h3>Contáctanos</h3>
+                  <form id="form" action="mailto:josecitohernandez5@gmail.com" class="form" method="post" enctype="text/plain">
+                        <p>
+                            <label>Nombre Completo</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p>
+                            <label>Email</label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p>
+                          <label>Celular</label>
+                          <input type="tel" name="telefono" id="telefono">
+                      </p>
+                      <p>
+                          <label>Asunto</label>
+                          <input type="text" name="asunto" id="asunto">
+                      </p>
+                        <p class="block">
+                          <label>Mensaje</label> 
+                            <textarea name="message" name="message" rows="3" id=""></textarea>
+                        </p>
+                        <p class="block">
+                        <button type="submit" name="submit">
+                            Enviar
+                        </button>
+                      </p>
+                  </form>
+                  <!--Cambiar Correo--><a href="mailto:josecitohernandez5@gmail.com" id="enviarcorreo" name="submit"></a>
+              </div>
+              <div class="contact-info">
+                  <h4>Más información</h4>
+                  <ul>
+                      <li><i class="fas fa-map-marker-alt"></i> Calle</li>
+                      <li><i class="fas fa-phone"></i> (+598) 098 438 435</li>
+                      <li><i class="fas fa-envelope-open-text"></i> contacto@gmail.com</li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+                  <div class="contacto">
+                    <a href="https://instagram.com"><img src="../imagenes/logos/instagram2.png"   class="f1img" alt=""></a>
+                    <a href="https://facebook.com"><img src="../imagenes/logos/facebook2.png" class="f1img" alt=""> </a>
+                    <a href="https://api.whatsapp.com/send?phone=598098438435&text=Hola, Quiero saber más de ustedes"><img src="../imagenes/logos/whatsapp2.png" class="f1img" alt=""></a>
+                  </div>
+              </div>
+    </main>
+
+
+</body>
+</html>
+
+<script>
+    const toggleButton = document.getElementById('button-menu')
+  const navWrapper = document.getElementById('nav')
+  
+  toggleButton.addEventListener('click',() => {
+    toggleButton.classList.toggle('close')
+    navWrapper.classList.toggle('show')
+  })
+  
+  navWrapper.addEventListener('click',e => {
+    if(e.target.id === 'nav'){
+      navWrapper.classList.remove('show')
+      toggleButton.classList.remove('close')
+    }
+  })
+</script>
+
+
+<script>
+  const images = document.querySelectorAll('.imagencarrusel img');
+  let currentIndex2 = 0;
+
+  function nextImage() {
+    images[currentIndex2].classList.remove('activomainimg');
+    images[currentIndex2].classList.add('fade-out');
+
+    currentIndex2 = (currentIndex2 + 1) % images.length;
+
+    images[currentIndex2].classList.add('activomainimg');
+    images[currentIndex2].classList.remove('fade-out');
+  }
+
+  setInterval(nextImage, 5000); // Cambiar la imagen cada 5 segundos
+</script>
+<script>
+const $form = document.querySelector('#form');
+const $buttonMailto = document.querySelector('#enviarcorreo');
+
+$form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = new FormData(this); //Cambiar Correo 
+  const mailtoLink = `mailto:josecitohernandez5@gmail.com?subject=${encodeURIComponent(
+    'Asunto: ' + form.get('asunto')
+  )}&body=${encodeURIComponent(
+    'Nombre: ' + form.get('name') +
+    '\nCorreo: ' + form.get('email') +
+    '\nCelular: ' + form.get('telefono') +
+    '\nMensaje: ' + form.get('message')
+  )}`;
+  $buttonMailto.setAttribute('href', mailtoLink);
+  $buttonMailto.click();
+}
+
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
