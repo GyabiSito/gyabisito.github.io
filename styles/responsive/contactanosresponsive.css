@@ -97,6 +97,19 @@ body {
 }
 
 @media screen and (max-width:768px) {
+  footer{
+    display: grid;
+    height: 400px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  footer img{
+    transform: translate(70%);
+  }
+  footer i{
+    margin:0;
+  }
   .pre-imagenes {
     display: none;
   }

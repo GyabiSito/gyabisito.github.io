@@ -27,7 +27,7 @@
         </div>
 
         <div class="pre-nav">
-            <a href="index.html"><img src="images/isotipo-mf-colores.svg" alt=""></a>
+            <a href="index.html"><img src="images/isotipo-mf-colores.svg" alt="Metalúrgica Fabal-Logo"></a>
             <div class="pre-imagenes">
                 <div class="pre-img" data-aos="fade-down">
                     <ul>
@@ -75,7 +75,7 @@
 
         <div class="container">
             <div id="slide">
-                <div class="item" style="background-image: url(images/1.jpeg);">
+                <div class="item" style="background-image: url(images/1.webp);">
                     <div class="content">
                         <div class="name">Gracias por Visitarnos</div>
                         <div class="des">Estamos a disposición cuando usted lo desee!</div>
@@ -90,7 +90,7 @@
                         <a href="paginas/info.html"><button>Saber Más</button></a>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/3.jpg);">
+                <div class="item" style="background-image: url(images/3.webp);">
                     <div class="content">
                         <div class="name">Metalúrgica Fabal</div>
                         <div class="des">FABÁL reúne profesionales con larga trayectoria y experiencia en este rubro,
@@ -99,21 +99,21 @@
                         <a href="paginas/info.html"><button>Saber Más</button></a>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/4.jpeg);">
+                <div class="item" style="background-image: url(images/4.webp);">
                     <div class="content">
                         <div class="name">Nuestros Servicios</div>
                         <div class="des">Tenemos a disposición varios tipos de servicio.</div>
                         <a href="paginas/servicios.html"><button>Saber Más</button></a>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/5.jpg);">
+                <div class="item" style="background-image: url(images/5.webp);">
                     <div class="content">
                         <div class="name">Nuestros Trabajos</div>
                         <div class="des">Tenemos una Galería de algunas fotos de nuestros trabajos realizados.</div>
                         <a href="paginas/fotos.html"><button>Saber Más</button></a>
                     </div>
                 </div>
-                <div class="item" style="background-image: url(images/6.jpg);">
+                <div class="item" style="background-image: url(images/6.webp);">
                     <div class="content">
                         <div class="name">¿Te interesa hablarnos? Contáctanos!</div>
                         <div class="des">Si te interesa nuestro trabajo, estamos a disposicion!</div>
@@ -312,21 +312,21 @@
 
         <div class="features">
             <div class="feat-img">
-                <img src="images/feat1.png" alt="">
+                <img src="images/feat1.png" alt="Metalúrgica Fabal-Industria Automobilística">
                 <h2>Industria Automobilística</h2>
                 <p>Tenemos experiencia en la industria automobilística. Ante cualquier problema puedes contactar con
                     nosotros!</p>
-                <img src="images/feat2.png" alt="">
+                <img src="images/feat2.png" alt="Metalúrgica Fabal-Industria Pesquera">
                 <h2>Industria Pesquera</h2>
                 <p>Tenemos experiencia con el mantenimiento y arreglo de Varios tipos de Barcos, ya sean industriales,
                     pesqueros o turistas </p>
             </div>
             <div class="feat-img"></div>
             <div class="feat-img">
-                <img src="images/feat3.png" alt="">
+                <img src="images/feat3.png" alt="Metalúrgica Fabal-Industria Eléctrica">
                 <h2>Industria Eléctrica</h2>
                 <p>Tenemos Experiencia con el mantenimiento y arreglo de dispositivos electrónicos.</p>
-                <img src="images/feat4.png" alt="">
+                <img src="images/feat4.png" alt="Metalúrgica Fabal-Industria Petrolera">
                 <h2>Industria Petrolera</h2>
                 <p>Tenemos Experiencia con el Mantenimiento y Arreglo de la maquinaria de la Industria Petrolera</p>
             </div>
@@ -402,11 +402,11 @@
                     <p>Para saber mas, contacta con nosotros con este formulario. <br> Tambien puedes ver nuestras redes
                         sociales. <br> Gracias</p>
                     <div class="contacto">
-                        <a href="https://instagram.com"><img src="images/instagram.png" class="f1img" alt=""></a>
-                        <a href="https://facebook.com"><img src="images/facebook.png" class="f1img" alt=""> </a>
+                        <a href="https://instagram.com"><img src="images/instagram.png" class="f1img" alt="Metalúrgica Fabal-Instagram"></a>
+                        <a href="https://facebook.com"><img src="images/facebook.png" class="f1img" alt="Metalúrgica Fabal-Facebook"> </a>
                         <a
                             href="https://api.whatsapp.com/send?phone=598098438435&text=Hola, Quiero saber más de ustedes"><img
-                                src="images/whatsapp.png" class="f1img" alt=""></a>
+                                src="images/whatsapp.png" class="f1img" alt="Metalúrgica Fabal-Whatsapp"></a>
                     </div>
                 </div>
             </div>
@@ -419,7 +419,7 @@
         </div>
     </main>
     <footer>
-        <img src="images/isotipo-mf-colores.svg" style="width: 70px;" alt="">
+        <img src="images/isotipo-mf-colores.svg" style="width: 70px;" alt="Metalúrgica Fabal-Logo">
         <h3>Metalúrgica Fabal</h3>
         <a href="paginas/contactanos.html">Contáctanos</a>
         <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
@@ -454,7 +454,39 @@
 </script>
 
 <script>
+    let intervalId; // Variable para almacenar el ID del intervalo
 
+    document.getElementById('next').onclick = function () {
+        let lists = document.querySelectorAll('.item');
+        document.getElementById('slide').appendChild(lists[0]);
+        restartAutoSlide(); // Llama a la función para reiniciar la transición automática
+    }
+
+    document.getElementById('prev').onclick = function () {
+        let lists = document.querySelectorAll('.item');
+        document.getElementById('slide').prepend(lists[lists.length - 1]);
+        restartAutoSlide(); // Llama a la función para reiniciar la transición automática
+    }
+
+    function nextSlide() {
+        let lists = document.querySelectorAll('.item');
+        document.getElementById('slide').appendChild(lists[0]);
+        restartAutoSlide(); // Llama a la función para reiniciar la transición automática
+    }
+
+    // Función para iniciar o reiniciar la transición automática
+    function autoSlide() {
+        intervalId = setInterval(nextSlide, 10000);
+    }
+
+    // Función para detener el intervalo actual y comenzar uno nuevo
+    function restartAutoSlide() {
+        clearInterval(intervalId); // Detiene el intervalo actual
+        autoSlide(); // Inicia un nuevo intervalo
+    }
+
+    // Llama a la función para iniciar la transición automática inicial
+    autoSlide();
 </script>
 
 
@@ -484,40 +516,6 @@
     window.addEventListener("load", function () {
         document.getElementById("loader").classList.toggle("loader2");
         document.getElementById("loader-div").classList.toggle("loader2");
-
-        let intervalId; // Variable para almacenar el ID del intervalo
-
-document.getElementById('next').onclick = function () {
-    let lists = document.querySelectorAll('.item');
-    document.getElementById('slide').appendChild(lists[0]);
-    restartAutoSlide(); // Llama a la función para reiniciar la transición automática
-}
-
-document.getElementById('prev').onclick = function () {
-    let lists = document.querySelectorAll('.item');
-    document.getElementById('slide').prepend(lists[lists.length - 1]);
-    restartAutoSlide(); // Llama a la función para reiniciar la transición automática
-}
-
-function nextSlide() {
-    let lists = document.querySelectorAll('.item');
-    document.getElementById('slide').appendChild(lists[0]);
-    restartAutoSlide(); // Llama a la función para reiniciar la transición automática
-}
-
-// Función para iniciar o reiniciar la transición automática
-function autoSlide() {
-    intervalId = setInterval(nextSlide, 10000);
-}
-
-// Función para detener el intervalo actual y comenzar uno nuevo
-function restartAutoSlide() {
-    clearInterval(intervalId); // Detiene el intervalo actual
-    autoSlide(); // Inicia un nuevo intervalo
-}
-
-// Llama a la función para iniciar la transición automática inicial
-autoSlide();
     })
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

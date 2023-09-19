@@ -679,13 +679,13 @@ nav a {
 }
 
 footer {
-    margin-top: 300px;
     width: 100vw;
     height: 100px;
     background-color: #252525;
     position: absolute;
     display: flex;
     align-items: center;
+
 }
 
 footer h3 {
