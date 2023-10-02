@@ -269,7 +269,7 @@ nav a {
 
 
 .parallax {
-    background-image: url('../images/1.webp');
+    background-image: url('../images/imagen-central.jpg');
     /* Ruta de la imagen de fondo */
     background-attachment: fixed;
     /* Fija la imagen de fondo */
@@ -280,10 +280,14 @@ nav a {
     display: flex;
     justify-content: center;
 
-    color: #fff;
+    color: #ec6543;
     /* Color de texto para que se destaque en la imagen de fondo */
-
-
+}
+.parallax p{
+    color: black;
+    background: rgba(105, 105, 105, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(8, 9, 22, 0.37);
+    backdrop-filter: blur(4px);
 }
 
 .parallax-content {
