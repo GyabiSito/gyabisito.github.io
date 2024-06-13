@@ -1,0 +1,1 @@
+Este es un proyecto el cual me pagaron para hacer. Se trata de una metalúrgica llamada "Metalúrgica Fabal" pero sin embargo no se pudo concretar la finalización del proyecto a produccion por temas del cliente. Este sitio esta hecho solamente con HTML, CSS y JavaScript
