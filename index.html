@@ -1,524 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!--Estilos Animaciones-->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-    <link rel="stylesheet" href="styles/index.css"/>
-    <link rel="stylesheet" href="styles/responsive/indexresponsive.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <meta name="author" content="José Gabriel Hernández"/>
-    <meta name="copyright" content="Propietario del copyright"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Metalúrgica FABÁL es una empresa Uruguaya especializada en la prestación de
-    servicios metalúrgicos a empresas en todo el territorio Nacional."/>
-    <meta name="keywords" content="Metalúrgica Fabal, Metalurgica, Fabal, Metalurgica Fabal, Servicios, Uruguay, Montevideo, San Jose, Alvaro Aguilar, Alvaro, Aguilar"/>
-    <title>Metalúrgica Fabal - Inicio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d13">
+  <meta name="author" content="José Gabriel Hernández">
+  <meta name="description" content="Portfolio de José Gabriel Hernández, desarrollador de software en Uruguay. Proyectos full-stack, sistemas en producción, Angular, Laravel, Java, PostgreSQL y Docker.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="José Gabriel Hernández — Software Developer">
+  <meta property="og:description" content="Full-stack products, client work and production systems built from Uruguay.">
+  <meta property="og:url" content="https://gyabisito.github.io/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/121214489?v=4">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://gyabisito.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/portfolio.css">
+  <title>José Gabriel Hernández — Software Developer</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"José Gabriel Hernández",
+    "url":"https://gyabisito.github.io/",
+    "image":"https://avatars.githubusercontent.com/u/121214489?v=4",
+    "jobTitle":"Software Developer",
+    "sameAs":[
+      "https://github.com/GyabiSito",
+      "https://www.linkedin.com/in/jose-gabriel-hernandez-512899251/"
+    ],
+    "knowsAbout":["Angular","Laravel","Java","PostgreSQL","Docker","Linux","Software Testing"]
+  }
+  </script>
 </head>
-
 <body>
-    <header>
-        <div class="loader" id="loader">
-            <div class="loaderimg">
-                <div id="loader-div"></div>
-            </div>
+  <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="José Gabriel Hernández — inicio">
+        <span class="brandmark" aria-hidden="true">JH</span>
+        <span>José Hernández</span>
+      </a>
+
+      <nav class="navlinks" id="navlinks" aria-label="Navegación principal">
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#experiencia" data-i18n="nav.experience">Experiencia</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+      </nav>
+
+      <div class="actions">
+        <div class="langs" aria-label="Idioma">
+          <button class="lang" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="menubtn" id="menubtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Software Developer · Uruguay</p>
+          <h1>
+            José Gabriel
+            <span data-i18n="hero.role">Desarrollo productos reales, de la idea a producción.</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">
+            Trabajo en frontend, backend, bases de datos e infraestructura. Me interesa construir software mantenible que resuelva problemas concretos y llegue a usuarios reales.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#proyectos" data-i18n="hero.ctaProjects">Ver proyectos</a>
+            <a class="btn" href="https://github.com/GyabiSito" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="btn" href="https://www.linkedin.com/in/jose-gabriel-hernandez-512899251/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+          <ul class="hero-meta" aria-label="Áreas de trabajo">
+            <li data-i18n="hero.meta1">Sistemas full-stack</li>
+            <li data-i18n="hero.meta2">Deploys en producción</li>
+            <li data-i18n="hero.meta3">Web · APIs · Infra</li>
+          </ul>
         </div>
 
-        <div class="pre-nav">
-            <a href="index.html"><img src="images/isotipo-mf-colores.svg" alt="Metalúrgica Fabal-Logo"></a>
-            <div class="pre-imagenes">
-                <div class="pre-img" data-aos="fade-down">
-                    <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt" style="font-size: 30px; color:#ec6543"></i>
-                            <p> Miguel Barreiro 083 </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pre-img" data-aos="fade-down">
-                    <ul>
-                        <li>
-                            <i class="fas fa-stopwatch" style="font-size: 30px; color:#ec6543"></i>
-                            <p> De 9:00 AM - 17:00PM <br>Sabados y Domingos <br>Cerrados</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pre-img" data-aos="fade-down">
-                    <ul>
-                        <li>
-                            <i class="fas fa-mobile" style="font-size: 30px; color:#ec6543"></i>
-                            <p> info@metalurgicafabal.com.uy <br> +598 099 700 976</p>
-                        </li>
-                    </ul>
-                </div>
+        <aside class="profile reveal">
+          <img src="https://avatars.githubusercontent.com/u/121214489?v=4" alt="José Gabriel Hernández" width="400" height="400" fetchpriority="high">
+          <div class="profile-row">
+            <div>
+              <strong>GyabiSito</strong>
+              <span data-i18n="hero.profile">Construyendo desde Uruguay</span>
             </div>
+            <i class="dot" aria-hidden="true"></i>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker" data-i18n="projects.kicker">Trabajo seleccionado</p>
+            <h2 data-i18n="projects.title">Proyectos que llegaron más lejos que el localhost.</h2>
+          </div>
+          <p class="intro" data-i18n="projects.intro">
+            Clientes reales, productos completos y sistemas con decisiones de arquitectura, integraciones, pruebas y despliegue.
+          </p>
         </div>
 
-        <nav id="nav" class="main-nav" style="z-index: 5;">
-            <div class="nav-links">
-                <a class="link-item" href="index.html">Inicio</a>
-                <a class="link-item" href="paginas/info.html">Informacion</a>
-                <a class="link-item" href="paginas/fotos.html">Galería</a>
-                <a class="link-item" href="paginas/servicios.html">Servicios</a>
-                <a class="link-item" href="paginas/contactanos.html">Contactanos</a>
+        <div class="projects">
+          <article class="project featured reveal">
+            <div class="media fabal" aria-label="Vista promocional del sitio de Metalúrgica Fabál">
+              <img class="fabal-shot" src="images/metalurgica-fabal-showcase.png" alt="Composición visual del sitio de Metalúrgica Fabál en desktop, tablet y móvil" loading="lazy">
             </div>
-        </nav>
-        <button id="button-menu" class="button-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <main>
+            <div class="body">
+              <div class="topline"><span class="type" data-i18n="type.client">Cliente · Producción</span><span class="year">2026</span></div>
+              <h3>Metalúrgica Fabál</h3>
+              <p class="desc" data-i18n="fabal.desc">
+                Sitio corporativo con Angular, foco mobile-first, SEO, accesibilidad, rendimiento y un despliegue propio con Docker/Nginx.
+              </p>
+              <ul class="tags"><li>Angular 22</li><li>TypeScript</li><li>Docker</li><li>Nginx</li><li>PHP API</li><li>SEO</li></ul>
+              <div class="plinks">
+                <a class="plink" href="https://metalurgicafabal.com.uy/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver sitio</span> ↗</a>
+              </div>
+            </div>
+          </article>
 
-        <div class="container">
-            <div id="slide">
-                <div class="item" style="background-image: url(images/1.webp);">
-                    <div class="content">
-                        <div class="name">Gracias por Visitarnos</div>
-                        <div class="des">Estamos a disposición cuando usted lo desee!</div>
-                        <a href="paginas/contactanos.html"><button>Saber Más</button></a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(images/imagen-central.jpg);">
-                    <div class="content">
-                        <div class="name">Metalúrgica Fabal</div>
-                        <div class="des">Metalúrgica FABÁL es una empresa Uruguaya especializada en la prestación de
-                            servicios metalúrgicos a empresas en todo el territorio Nacional.</div>
-                        <a href="paginas/info.html"><button>Saber Más</button></a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(images/3.webp);">
-                    <div class="content">
-                        <div class="name">Metalúrgica Fabal</div>
-                        <div class="des">FABÁL reúne profesionales con larga trayectoria y experiencia en este rubro,
-                            hoy contamos con soldadores calificados, cañistas, oficiales especializados en montajes,
-                            etc. Realizando trabajos principalmente en la industria.</div>
-                        <a href="paginas/info.html"><button>Saber Más</button></a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(images/4.webp);">
-                    <div class="content">
-                        <div class="name">Nuestros Servicios</div>
-                        <div class="des">Tenemos a disposición varios tipos de servicio.</div>
-                        <a href="paginas/servicios.html"><button>Saber Más</button></a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(images/5.webp);">
-                    <div class="content">
-                        <div class="name">Nuestros Trabajos</div>
-                        <div class="des">Tenemos una Galería de algunas fotos de nuestros trabajos realizados.</div>
-                        <a href="paginas/fotos.html"><button>Saber Más</button></a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(images/6.webp);">
-                    <div class="content">
-                        <div class="name">¿Te interesa hablarnos? Contáctanos!</div>
-                        <div class="des">Si te interesa nuestro trabajo, estamos a disposicion!</div>
-                        <a href="paginas/contactanos.html"><button>Saber Más</button></a>
-                    </div>
-                </div>
+          <article class="project reveal">
+            <div class="media">
+              <img src="https://github.com/user-attachments/assets/0af1fd0e-91c9-4e61-8f69-9160cda04d6d" alt="Vista de Komorebi" loading="lazy">
             </div>
-            <div class="buttons">
-                <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-                <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            <div class="body">
+              <div class="topline"><span class="type" data-i18n="type.client">Cliente · Producción</span><span class="year">2026</span></div>
+              <h3>Komorebi</h3>
+              <p class="desc" data-i18n="komorebi.desc">E-commerce en producción con catálogo, carrito, pagos, pedidos, inventario, administración y notificaciones transaccionales.</p>
+              <ul class="tags"><li>Angular</li><li>Laravel</li><li>PostgreSQL</li><li>Redis</li><li>MercadoPago</li><li>Docker</li></ul>
+              <div class="plinks"><a class="plink" href="https://komorebi.com.uy/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver sitio</span> ↗</a></div>
             </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="media">
+              <img src="https://github.com/user-attachments/assets/4566097e-f2d3-4fbd-8f9f-48e109cfbdd0" alt="Vista de Camba" loading="lazy">
+            </div>
+            <div class="body">
+              <div class="topline"><span class="type" data-i18n="type.client">Cliente · Producción</span><span class="year">2026</span></div>
+              <h3>Camba</h3>
+              <p class="desc" data-i18n="camba.desc">E-commerce para cliente real, con Store, Admin y API separados, SSR, caché, procesamiento asíncrono y foco en SEO y performance.</p>
+              <ul class="tags"><li>Angular SSR</li><li>Laravel</li><li>PostgreSQL</li><li>Redis</li><li>Docker</li><li>Cloudflare</li></ul>
+              <div class="plinks">
+                <a class="plink" href="https://www.camba.com.uy/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver sitio</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="media">
+              <img src="https://github.com/user-attachments/assets/9b4189c6-c522-4a58-a34c-f684379c1d32" alt="Vista de ProConnect" loading="lazy">
+            </div>
+            <div class="body">
+              <div class="topline"><span class="type" data-i18n="type.product">Producto · Full-stack</span><span class="year">2026</span></div>
+              <h3>ProConnect</h3>
+              <p class="desc" data-i18n="proconnect.desc">Marketplace de servicios con disponibilidad, reservas, pagos, actualizaciones en tiempo real y controles transaccionales para evitar dobles reservas.</p>
+              <ul class="tags"><li>Angular</li><li>Laravel 13</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>MercadoPago</li></ul>
+              <div class="plinks">
+                <a class="plink" href="https://tallerphp.gyabisito.dev/" target="_blank" rel="noreferrer"><span data-i18n="link.app">Abrir app</span> ↗</a>
+                <a class="plink" href="https://github.com/ProConnect-PHP/" target="_blank" rel="noreferrer"><span data-i18n="link.code">Código</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="media">
+              <img src="https://github.com/user-attachments/assets/fc35ca74-8756-4fb5-9e26-866cdc71d289" alt="Vista de Voltio" loading="lazy">
+            </div>
+            <div class="body">
+              <div class="topline"><span class="type" data-i18n="type.product">Producto · Full-stack</span><span class="year">2026</span></div>
+              <h3>Voltio</h3>
+              <p class="desc" data-i18n="voltio.desc">Plataforma de carga para vehículos eléctricos con mapa interactivo, búsqueda geoespacial, reservas, sesiones, vehículos, reseñas y rutas.</p>
+              <ul class="tags"><li>Angular</li><li>Laravel</li><li>PostgreSQL</li><li>PostGIS</li><li>Redis</li><li>Mapbox</li></ul>
+              <div class="plinks"><a class="plink" href="https://voltio.gyabisito.dev/" target="_blank" rel="noreferrer"><span data-i18n="link.app">Abrir app</span> ↗</a></div>
+            </div>
+          </article>
         </div>
 
-        <div id="mainhometxt">
-            <h1>MAIN HOME</h1>
+        <div class="more">
+          <article class="mini reveal">
+            <span class="type" data-i18n="type.academic">Equipo · UTEC</span>
+            <h3>VolandoUY</h3>
+            <p data-i18n="volandouy.desc">Sistema de gestión de aerolínea desarrollado en equipo. Participé como Technical Lead en decisiones de implementación y arquitectura.</p>
+            <div class="plinks"><a class="plink" href="https://github.com/volando-uy/volando-app" target="_blank" rel="noreferrer"><span data-i18n="link.code">Código</span> ↗</a></div>
+          </article>
+          <article class="mini reveal">
+            <span class="type" data-i18n="type.game">Proyecto · Java</span>
+            <h3>Pong</h3>
+            <p data-i18n="pong.desc">Pong intervenido con dificultad progresiva, dash, efectos visuales, game loop y una versión web ejecutable.</p>
+            <div class="plinks"><a class="plink" href="https://pong.gyabisito.dev/" target="_blank" rel="noreferrer"><span data-i18n="link.app">Abrir app</span> ↗</a></div>
+          </article>
+          <article class="mini reveal">
+            <span class="type" data-i18n="type.game">Proyecto · Godot</span>
+            <h3>Maga(O)veja</h3>
+            <p data-i18n="maga.desc">Juego de supervivencia rítmica con patrones de ataque sincronizados, tutorial y configuración de niveles.</p>
+            <div class="plinks"><a class="plink" href="https://tallervideojuego.gyabisito.dev/" target="_blank" rel="noreferrer"><span data-i18n="link.app">Abrir app</span> ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker" data-i18n="experience.kicker">Experiencia</p>
+            <h2 data-i18n="experience.title">Producto, enterprise y calidad de software.</h2>
+          </div>
+          <p class="intro" data-i18n="experience.intro">La práctica profesional y los proyectos personales se complementan: entender sistemas grandes, probarlos bien y también construirlos de punta a punta.</p>
         </div>
 
+        <div class="exp-grid">
+          <div class="timeline">
+            <article class="item reveal">
+              <div class="date">2026 — <span data-i18n="present">Actualidad</span></div>
+              <div>
+                <h3>Topaz</h3>
+                <span class="role" data-i18n="topaz.role">Software Developer</span>
+                <p data-i18n="topaz.desc">Desarrollo sobre el ecosistema Topaz y su lenguaje 4GL, trabajando con Git, Linux, Docker, mensajería y componentes Java en entornos empresariales.</p>
+              </div>
+            </article>
+            <article class="item reveal">
+              <div class="date">2024 — 2025</div>
+              <div>
+                <h3>IBM</h3>
+                <span class="role" data-i18n="ibm.role">QA Testing Internship</span>
+                <p data-i18n="ibm.desc">Testing y automatización en sistemas enterprise, con BDD, DB2, z/OS y trabajo sobre procesos de calidad de software.</p>
+              </div>
+            </article>
+          </div>
 
-        <section class="misionsec">
-            <div class="mision">
-                <div class="mbox">
-                    <div id="mboximg1" data-aos="zoom-in"></div>
-                    <h3 data-aos="zoom-in">Trabajo</h3>
-                    <p data-aos="zoom-in">Somos capaces de realizar el trabajo a tiempo y forma. Si nos contactas,
-                        estaremos disponible lo mas pronto para serle de ayuda.</p>
-                </div>
-                <div class="mbox">
-                    <div id="mboximg2" data-aos="zoom-in"></div>
-                    <h3 data-aos="zoom-in">Empleados</h3>
-                    <p data-aos="zoom-in">Tenemos empleados muy capacitados para los trabajos que realizamos.
-                        Responsables, Trabajadores, Honestos y Puntuales.</p>
-                </div>
-                <div class="mbox">
-                    <div id="mboximg3" data-aos="zoom-in"></div>
-                    <h3 data-aos="zoom-in">Mecánica</h3>
-                    <p data-aos="zoom-in">Tenemos a los mejores mecánicos del Uruguay, capaces de realizar los trabajo
-                        en tiempo y forma eficazmente</p>
-                </div>
+          <aside class="edu reveal">
+            <h3 data-i18n="education.title">Formación</h3>
+            <div class="edu-row">
+              <strong>UTEC</strong>
+              <span data-i18n="education.utec">Computer Science · 2023 — 2026</span>
             </div>
-        </section>
-
-        <section>
-            <div class="about-us">
-                <div class="about-container">
-                    <div class="ab-c-top-left">
-                        <h2>Sobre Nosotros</h2>
-                        <p>Metalúrgica FABÁL es una empresa Uruguaya especializada en la prestación de servicios
-                            metalúrgicos a empresas en todo el territorio Nacional.
-                            <br><br>
-                            FABÁL reúne profesionales con larga trayectoria y experiencia en este rubro, hoy contamos
-                            con soldadores calificados, cañistas, oficiales especializados en montajes, etc. Realizando
-                            trabajos principalmente en la industria.
-                            <br><br>
-                            Le invitamos a conocer nuestros servicios,ver fotografias de nuestros trabajos realizados,
-                            informarse sobre nuestros clientes y contactarse con nosotros cuando lo desee.
-                        </p>
-                        <button>
-                            <a href="paginas/contactanos.html">Contáctanos</a>
-                        </button>
-                    </div>
-                    <div class="ab-c-top-right"></div>
-                    <div class="ab-c-bottom-left"></div>
-                    <div class="ab-c-bottom-right">
-                        <div class="rectangle">
-                            <h2>Recursos Certificados</h2>
-                        </div>
-                        <div class="rectangle">
-                            <div class="inner-div" id="inner1">
-                                <p>90%</p>
-                            </div>
-                        </div>
-                        <div class="rectangle">
-                            <h2>Clientes Satisfechos</h2>
-                        </div>
-                        <div class="rectangle">
-                            <div class="inner-div" id="inner2">
-                                <p>75%</p>
-                            </div>
-                        </div>
-                        <div class="rectangle">
-                            <h2>Beneficio Anual</h2>
-                        </div>
-                        <div class="rectangle">
-                            <div class="inner-div" id="inner3">
-                                <p>85%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="edu-row">
+              <strong>UTU</strong>
+              <span data-i18n="education.utu">Desarrollo Web · 2020 — 2022 · Mejor proyecto de tesis</span>
             </div>
-        </section>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-
-        <div id="blogpost">
-            <h2>BLOG POSTS</h2>
-            <p>Algunos de nuestros Trabajos</p>
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker" data-i18n="stack.kicker">Stack</p>
+            <h2 data-i18n="stack.title">Herramientas que uso para entregar software completo.</h2>
+          </div>
+          <p class="intro" data-i18n="stack.intro">No organizado como una nube de logos, sino por las capas donde realmente trabajo.</p>
         </div>
 
-        <div class="blog-container">
-            <div class="blog-top-left">
-                <h2>Trabajo Realizado</h2>
-                <h3><i class="fa-regular fa-bookmark" style="color: #ffffff;"></i>Industrial <br><i
-                        class="fa-regular fa-user" style="color: #ffffff;"></i>José Hernández</h3>
-                <p>Este ha sido un trabajo bastante complicado, pero con dedicación, tiempo y sobretodo esfuerzo se ha
-                    logrado salir adelante. Al cliente le encantó el resultado.</p>
-            </div>
-            <div class="blog-top-right"></div>
-            <div class="blog-bottom-left"></div>
-            <div class="blog-bottom-right">
-                <h2>Trabajo Realizado</h2>
-                <h3><i class="fa-regular fa-bookmark" style="color: #ffffff;"></i>Industrial <br><i
-                        class="fa-regular fa-user" style="color: #ffffff;"></i>José Hernández</h3>
-                <p>Este ha sido un trabajo bastante complicado, pero con dedicación, tiempo y sobretodo esfuerzo se ha
-                    logrado salir adelante. Al cliente le encantó el resultado.</p>
-
-            </div>
+        <div class="stack">
+          <article class="stack-card reveal"><span>Frontend</span><h3>Angular · TypeScript</h3><p data-i18n="stack.front">Interfaces, SSR, estado, formularios, accesibilidad y performance.</p></article>
+          <article class="stack-card reveal"><span>Backend</span><h3>Laravel · Java</h3><p data-i18n="stack.back">APIs, autenticación, reglas de negocio, testing e integraciones.</p></article>
+          <article class="stack-card reveal"><span>Data</span><h3>PostgreSQL · Redis</h3><p data-i18n="stack.data">Modelado, SQL, PostGIS, caché y persistencia orientada al caso de uso.</p></article>
+          <article class="stack-card reveal"><span>Infra</span><h3>Docker · Linux · Nginx</h3><p data-i18n="stack.infra">Contenedores, reverse proxy, TLS, despliegues y troubleshooting.</p></article>
         </div>
+      </div>
+    </section>
 
-        <div class="parallax">
-            <div class="parallax-content">
-
-                <div class="container-parallax">
-                    <div class="box-parallax">
-                        <h2>Paquete Inicial</h2>
-                        <h3>Mensualidad</h3>
-                        <div class="precio">
-                            <h4>$99</h4>
-
-                        </div>
-                        <p><i class="fa-solid fa-industry"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Instalación
-                            de Maquinaria.</p>
-                        <p><i class="fa-solid fa-microchip"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Control
-                            de Sistemas.</p>
-                        <p><i class="fa-solid fa-wrench"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Mantenimiento.
-                        </p>
-                        <p><i class="fa-solid fa-building-lock"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Seguro.
-                        </p>
-
-                        <a href="paginas/contactanos.html"><button>Empieza Ahora</button></a>
-                    </div>
-                    <div class="box-parallax">
-                        <h2>Paquete Profesional</h2>
-                        <h3>Mensualidad</h3>
-                        <div class="precio">
-                            <h4>$149</h4>
-
-                        </div>
-                        <p><i class="fa-solid fa-industry"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Instalación
-                            de Maquinaria y Cable.</p>
-                        <p><i class="fa-solid fa-microchip"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Control
-                            y Prueba de los Sistemas.</p>
-                        <p><i class="fa-solid fa-wrench"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Mantenimiento.
-                        </p>
-                        <p><i class="fa-solid fa-building-lock" style="color: #151515; margin-right: 10px; font-size:
-                                30px; margin-left: 5px;"></i>Seguro.</p>
-
-                        <a href="paginas/contactanos.html"><button>Empieza Ahora</button></a>
-                    </div>
-                    <div class="box-parallax">
-                        <h2>Paquete De Negocios</h2>
-                        <h3>Mensualidad</h3>
-                        <div class="precio">
-                            <h4>$199</h4>
-                        </div>
-                        <p><i class="fa-solid fa-industry"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Instalación
-                            de Maquinaria y Cable.</p>
-                        <p><i class="fa-solid fa-microchip"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Control
-                            y Prueba de los Sistemas.</p>
-                        <p><i class="fa-solid fa-wrench"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Mantenimiento.
-                        </p>
-                        <p><i class="fa-solid fa-building-lock"
-                                style="color: #151515; margin-right: 10px; font-size: 30px; margin-left: 5px;"></i>Seguro
-                            Ilimitado.</p>
-
-                        <a href="paginas/contactanos.html"><button>Empieza Ahora</button></a>
-                    </div>
-                </div>
-            </div>
+    <section class="section" id="sobre-mi">
+      <div class="container about reveal">
+        <div>
+          <p class="kicker" data-i18n="about.kicker">Sobre mí</p>
+          <h2 data-i18n="about.title">Me gusta que el software termine en manos de alguien.</h2>
         </div>
-
-
-        <div class="featureh2">
-            <h2>CARACTERÍSTICAS</h2>
-            <h3>Características y Habilidades</h3>
+        <div class="about-copy">
+          <p data-i18n="about.p1">Soy desarrollador de software en Uruguay. Disfruto trabajar a través de todo el ciclo: entender el problema, diseñar la solución, implementar frontend y backend, integrar servicios, desplegar y resolver lo que aparece en producción.</p>
+          <p data-i18n="about.p2">Mi GitHub tiene ejercicios y proyectos de aprendizaje, pero este portfolio prioriza los trabajos que mejor representan cómo construyo hoy: productos completos, clientes reales y sistemas con decisiones técnicas que importan.</p>
         </div>
+      </div>
+    </section>
 
-        <div class="features">
-            <div class="feat-img">
-                <img src="images/feat1.png" alt="Metalúrgica Fabal-Industria Automobilística">
-                <h2>Industria Automobilística</h2>
-                <p>Tenemos experiencia en la industria automobilística. Ante cualquier problema puedes contactar con
-                    nosotros!</p>
-                <img src="images/feat2.png" alt="Metalúrgica Fabal-Industria Pesquera">
-                <h2>Industria Pesquera</h2>
-                <p>Tenemos experiencia con el mantenimiento y arreglo de Varios tipos de Barcos, ya sean industriales,
-                    pesqueros o turistas </p>
-            </div>
-            <div class="feat-img"></div>
-            <div class="feat-img">
-                <img src="images/feat3.png" alt="Metalúrgica Fabal-Industria Eléctrica">
-                <h2>Industria Eléctrica</h2>
-                <p>Tenemos Experiencia con el mantenimiento y arreglo de dispositivos electrónicos.</p>
-                <img src="images/feat4.png" alt="Metalúrgica Fabal-Industria Petrolera">
-                <h2>Industria Petrolera</h2>
-                <p>Tenemos Experiencia con el Mantenimiento y Arreglo de la maquinaria de la Industria Petrolera</p>
-            </div>
+    <section class="contact" id="contacto">
+      <div class="container contact-box reveal">
+        <div>
+          <p class="kicker" data-i18n="contact.kicker">Contacto</p>
+          <h2 data-i18n="contact.title">¿Tenés un producto, proyecto u oportunidad para conversar?</h2>
+          <p data-i18n="contact.text">Podés ver el resto de mi trabajo en GitHub o contactarme por LinkedIn.</p>
         </div>
-
-        <section class="datos">
-            <div class="datos-mis">
-                <div class="mbox-datos">
-                    <div id="mboximg1-datos" data-aos="zoom-in"></div>
-                    <h3 data-aos="zoom-in">Nuestra Maquinaria</h3>
-                    <p data-aos="zoom-in">Tenemos la Mejor Maquinaria del Uruguay para nuestros trabajos, siendo de esta
-                        forma mas rápidos y precisos al momento de realizar un pedido.</p>
-                </div>
-                <div class="mbox-datos">
-                    <div id="mboximg2-datos" data-aos="zoom-in"></div>
-                    <h3 data-aos="zoom-in">Emisiones</h3>
-                    <p data-aos="zoom-in">Nuestras Emisiones de Carbono no son tan altas, por lo que nuestra empresa no
-                        afecta tanto al Medio Ambiente y a la Naturaleza.</p>
-                </div>
-                <div class="mbox-datos">
-                    <div id="mboximg3-datos" data-aos="zoom-in"></div>
-                    <h3 data-aos="zoom-in">Capacitaciones</h3>
-                    <p data-aos="zoom-in">Nuestros Trabajadores son los más capacitados para realizar todo tipo de
-                        trabajos. Efectivos, Rápidos, Precisos.</p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <div class="content">
-            <div class="contact-wrapper" data-aos="fade-down">
-                <div class="contact-form">
-                    <h3>Contáctanos</h3>
-                    <form id="form" action="mailto:josecitohernandez5@gmail.com" class="form" method="post"
-                        enctype="text/plain">
-                        <p>
-                            <label>Nombre Completo</label>
-                            <input type="text" name="name" id="name">
-                        </p>
-                        <p>
-                            <label>Email</label>
-                            <input type="email" name="email" id="email">
-                        </p>
-                        <p>
-                            <label>Celular</label>
-                            <input type="tel" name="telefono" id="telefono">
-                        </p>
-                        <p>
-                            <label>Asunto</label>
-                            <input type="text" name="asunto" id="asunto">
-                        </p>
-                        <p class="block">
-                            <label>Mensaje</label>
-                            <textarea name="message" name="message" rows="3" id=""></textarea>
-                        </p>
-                        <p class="block">
-                            <button type="submit" name="submit">
-                                Enviar
-                            </button>
-                        </p>
-                    </form>
-                    <!--Cambiar Correo--><a href="mailto:josecitohernandez5@gmail.com" id="enviarcorreo"
-                        name="submit"></a>
-                </div>
-                <div class="contact-info">
-                    <h4>Más información</h4>
-                    <ul class="contact-ul">
-                        <li><i class="fas fa-map-marker-alt"></i> Miguel Barreiro 083 </li>
-                        <li><i class="fas fa-phone"></i> (+598) 099 700 976</li>
-                        <li><i class="fas fa-envelope-open-text"></i> contacto@gmail.com</li>
-                    </ul>
-                    <p>Para saber mas, contacta con nosotros con este formulario. <br> Tambien puedes ver nuestras redes
-                        sociales. <br> Gracias</p>
-                    <div class="contacto">
-                        <a href="https://instagram.com"><img src="images/instagram.png" class="f1img" alt="Metalúrgica Fabal-Instagram"></a>
-                        <a href="https://facebook.com"><img src="images/facebook.png" class="f1img" alt="Metalúrgica Fabal-Facebook"> </a>
-                        <a
-                            href="https://api.whatsapp.com/send?phone=598098438435&text=Hola, Quiero saber más de ustedes"><img
-                                src="images/whatsapp.png" class="f1img" alt="Metalúrgica Fabal-Whatsapp"></a>
-                    </div>
-                </div>
-            </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="https://www.linkedin.com/in/jose-gabriel-hernandez-512899251/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/GyabiSito" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d979.3357163745884!2d-56.7118575357169!3d-34.348452873287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a17711be146893%3A0x715be423b1d8848!2sSede%20De%20Motociclistas%20Los%20Truenos!5e0!3m2!1ses-419!2sde!4v1693001934362!5m2!1ses-419!2sde"
-                width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </main>
-    <footer>
-        <img src="images/isotipo-mf-colores.svg" style="width: 70px;" alt="Metalúrgica Fabal-Logo">
-        <h3>Metalúrgica Fabal</h3>
-        <a href="paginas/contactanos.html">Contáctanos</a>
-        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=598098438435&text=Hola, Quiero saber más de ustedes"><i
-                class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-    </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> José Gabriel Hernández</span>
+      <div class="footer-links">
+        <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
+        <a href="https://github.com/GyabiSito" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/portfolio.js" defer></script>
 </body>
-
 </html>
-
-<script>
-    const toggleButton = document.getElementById('button-menu')
-    const navWrapper = document.getElementById('nav')
-
-    toggleButton.addEventListener('click', () => {
-        toggleButton.classList.toggle('close')
-        navWrapper.classList.toggle('show')
-        document.getElementById('prev').style.visibility = "hidden";
-        document.getElementById('next').style.visibility = "hidden";
-    })
-
-    navWrapper.addEventListener('click', e => {
-        if (e.target.id === 'nav') {
-            navWrapper.classList.remove('show')
-            toggleButton.classList.remove('close')
-            document.getElementById('prev').style.visibility = "visible";
-            document.getElementById('next').style.visibility = "visible";
-        }
-    })
-
-</script>
-
-<script>
-    let intervalId; // Variable para almacenar el ID del intervalo
-
-    document.getElementById('next').onclick = function () {
-        let lists = document.querySelectorAll('.item');
-        document.getElementById('slide').appendChild(lists[0]);
-        restartAutoSlide(); // Llama a la función para reiniciar la transición automática
-    }
-
-    document.getElementById('prev').onclick = function () {
-        let lists = document.querySelectorAll('.item');
-        document.getElementById('slide').prepend(lists[lists.length - 1]);
-        restartAutoSlide(); // Llama a la función para reiniciar la transición automática
-    }
-
-    function nextSlide() {
-        let lists = document.querySelectorAll('.item');
-        document.getElementById('slide').appendChild(lists[0]);
-        restartAutoSlide(); // Llama a la función para reiniciar la transición automática
-    }
-
-    // Función para iniciar o reiniciar la transición automática
-    function autoSlide() {
-        intervalId = setInterval(nextSlide, 10000);
-    }
-
-    // Función para detener el intervalo actual y comenzar uno nuevo
-    function restartAutoSlide() {
-        clearInterval(intervalId); // Detiene el intervalo actual
-        autoSlide(); // Inicia un nuevo intervalo
-    }
-
-    // Llama a la función para iniciar la transición automática inicial
-    autoSlide();
-</script>
-
-
-
-<script>
-    const $form = document.querySelector('#form');
-    const $buttonMailto = document.querySelector('#enviarcorreo');
-
-    $form.addEventListener('submit', handleSubmit);
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        const form = new FormData(this); //Cambiar Correo 
-        const mailtoLink = `mailto:josecitohernandez5@gmail.com?subject=${encodeURIComponent(
-            'Asunto: ' + form.get('asunto')
-        )}&body=${encodeURIComponent(
-            'Nombre: ' + form.get('name') +
-            '\nCorreo: ' + form.get('email') +
-            '\nCelular: ' + form.get('telefono') +
-            '\nMensaje: ' + form.get('message')
-        )}`;
-        $buttonMailto.setAttribute('href', mailtoLink);
-        $buttonMailto.click();
-    }
-</script>
-<script>
-    window.addEventListener("load", function () {
-        document.getElementById("loader").classList.toggle("loader2");
-        document.getElementById("loader-div").classList.toggle("loader2");
-    })
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>

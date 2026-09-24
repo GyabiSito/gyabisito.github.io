@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gyabisito.github.io/sitemap.xml
